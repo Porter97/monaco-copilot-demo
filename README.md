@@ -33,4 +33,4 @@ OPENAI_API_KEY=your-openai-api-key
 ```
 
 ## Learn More
-Read the article [How to Build a OpenAI GPT-3.5 Turbo Copilot With The Monaco Editor](https://www.freecodecamp.org/news/build-openai-gpt-3-5-turbo-copilot-monaco-editor/) to learn more about this project.
+Read the article [How to Build a OpenAI GPT-3.5 Turbo Copilot With The Monaco Editor](https://spencerporter2.medium.com/building-copilot-on-the-web-f090ceb9b20b) to learn more about this project.
