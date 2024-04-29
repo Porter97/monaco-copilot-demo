@@ -18,7 +18,7 @@ import { GenerateInstructions } from "@/components/editor/prompt";
 
 interface TextEditorProps {
   // language: Specifies the programming language for the editor. It must be one of the predefined options (although you can add more if you want)
-  language: "javascript" | "typescript" | "python" | "java" | "c";
+  language: "javascript" | "typescript" | "python" | "java" | "c" | "sql";
   cacheSize?: number;
   refreshInterval?: number;
 }
@@ -109,9 +109,10 @@ const TextEditor = ({
 
           // Update the cached suggestions with the new suggestion (up to the cache size limit)
           // Cache size is set to 6 by default, which I found to be a good balance between performance and usability
-          setCachedSuggestions((prev) =>
-            [...prev, newSuggestion].slice(-cacheSize),
-          );
+          setCachedSuggestions((prev) => [
+            ...prev.slice(-cacheSize + 1),
+            newSuggestion,
+          ]);
         }
       })
       .catch((error) => {
